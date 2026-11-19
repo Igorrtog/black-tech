@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Black Tech Challenge</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>Black Tech Challenge</h1>
+  <p class="sub">Quiz sobre tecnologia, ciência e representatividade, e um mural para imaginar o futuro.</p>
+</header>
+
+<nav>
+  <button class="on" data-a="quiz">Quiz</button>
+  <button data-a="mural">Mural</button>
+</nav>
+
+<section id="quiz">
+  <div id="inicio" class="box">
+    <h2>Quanto você sabe sobre quem constrói a tecnologia?</h2>
+    <p>São 10 perguntas sorteadas sobre:</p>
+    <ul class="temas">
+      <li>Mulheres negras na tecnologia</li>
+      <li>Cientistas e inventores negros</li>
+      <li>Inteligência artificial</li>
+      <li>Ética e inclusão digital</li>
+      <li>Representatividade nas profissões tecnológicas</li>
+    </ul>
+    <button class="btn" id="btn-iniciar">Começar o desafio</button>
+  </div>
+
+  <div id="jogo" class="box hide">
+    <div class="topo"><span id="cont"></span><span>Pontos: <b id="pts">0</b></span></div>
+    <div class="prog"><i id="barra"></i></div>
+    <span id="tema"></span>
+    <h2 id="pergunta"></h2>
+    <div id="ops"></div>
+    <div id="fb" class="hide" aria-live="polite">
+      <strong id="fb-t"></strong>
+      <p id="fb-e"></p>
+      <button class="btn" id="prox"></button>
+    </div>
+  </div>
+
+  <div id="fim" class="box hide">
+    <h2 id="nota"></h2>
+    <p id="msg"></p>
+    <p class="edu">Tecnologia é feita por pessoas. Quando mais pessoas, com vivências diferentes, participam da criação, as soluções ficam mais justas e úteis para todas. Que tal deixar sua ideia no mural?</p>
+    <button class="btn" id="btn-de-novo">Jogar de novo</button><button class="btn ghost" id="btn-mural">Ir para o mural</button>
+  </div>
+</section>
+
+<section id="mural" class="hide">
+  <div class="box">
+    <h2>O futuro também é nosso</h2>
+    <label for="ideia">Se você pudesse criar uma tecnologia para transformar o mundo, qual problema ela resolveria?</label>
+    <textarea id="ideia" maxlength="280" rows="4"></textarea>
+    <input id="nome" maxlength="30" placeholder="Seu nome (opcional)" aria-label="Seu nome (opcional)">
+    <button class="btn" id="btn-fixar">Fixar no mural</button>
+  </div>
+  <div id="cards"></div>
+  <p id="vazio"><small>Nenhuma ideia fixada ainda. Escreva a primeira.</small></p>
+</section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

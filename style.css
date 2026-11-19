@@ -1,0 +1,44 @@
+/* style.css: visual do Black Tech Challenge. */
+:root{--bg:#17110e;--card:#241a15;--alt:#2e221b;--line:#45342a;--tx:#f2e9dc;--mut:#b5a597;--gold:#f0b429;--teal:#2dd4bf;--no:#ff7a7a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 system-ui,"Segoe UI",Roboto,sans-serif}
+h1,h2,h3{font-family:Georgia,"Iowan Old Style","Times New Roman",serif;line-height:1.2;margin:0}
+.wrap{max-width:680px;margin:0 auto;padding:40px 16px 64px}
+h1{font-size:clamp(2.2rem,7vw,3.4rem);letter-spacing:-.03em}
+.sub{margin:8px 0 28px;color:var(--mut)}
+nav{display:flex;gap:28px;border-bottom:1px solid var(--line);margin-bottom:24px}
+nav button{background:none;border:0;border-bottom:3px solid transparent;color:var(--mut);padding:8px 0;font:inherit;cursor:pointer}
+nav button.on{color:var(--tx);border-color:var(--gold)}
+.box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:28px}
+.hide{display:none!important}
+h2{font-size:1.5rem;margin-bottom:12px}
+.temas{margin:16px 0 24px;padding:0 0 0 18px;border-left:3px solid var(--gold);list-style:none}
+.btn{background:var(--gold);color:#1d130b;border:0;border-radius:8px;padding:12px 22px;font:inherit;font-weight:700;cursor:pointer}
+.btn:hover{background:#ffc94d}
+.ghost{background:none;color:var(--tx);border:1px solid var(--line);margin-left:8px}
+.ghost:hover{background:var(--alt)}
+.topo{display:flex;justify-content:space-between;color:var(--mut);font-size:.9rem}
+.prog{height:4px;background:var(--line);margin:10px 0 22px}
+.prog i{display:block;height:100%;width:0;background:var(--gold);transition:width .3s}
+#tema{color:var(--gold);font-size:.9rem}
+#pergunta{font-size:1.4rem;margin:4px 0 18px}
+.op{display:block;width:100%;text-align:left;background:var(--alt);border:1px solid var(--line);color:var(--tx);border-radius:8px;padding:12px 16px;margin:8px 0;font:inherit;cursor:pointer}
+.op:hover:enabled{border-color:var(--gold)}
+.op:disabled{cursor:default;color:var(--mut)}
+.op.certa{border-color:var(--teal);background:#12332f;color:var(--tx)}
+.op.errada{border-color:var(--no);background:#3b1f1f;color:var(--tx)}
+#fb{margin-top:20px;padding-top:16px;border-top:1px solid var(--line)}
+#fb p{margin:6px 0 16px}
+.ok{color:var(--teal)}.no{color:var(--no)}
+.edu{border-left:3px solid var(--teal);padding-left:14px;margin:20px 0}
+label{display:block;font-weight:600;margin-bottom:10px}
+textarea,input{width:100%;background:var(--alt);border:1px solid var(--line);color:var(--tx);border-radius:8px;padding:12px;font:inherit;margin-bottom:10px}
+small{color:var(--mut)}
+#cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:18px;margin:28px 0 12px}
+.post{padding:16px 16px 12px;color:#1d130b;border-radius:2px;transform:rotate(var(--r));box-shadow:0 8px 16px #0007}
+.post p{margin:0;font-family:Georgia,serif;font-size:1.05rem;line-height:1.4;overflow-wrap:anywhere}
+.post footer{margin-top:12px;font-size:.8rem;opacity:.75}
+.p0{background:#f0b429}.p1{background:#2dd4bf}.p2{background:#ff9a8a}.p3{background:#c4b5fd}
+.link{background:none;border:0;color:var(--mut);text-decoration:underline;font:inherit;cursor:pointer;padding:0}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
